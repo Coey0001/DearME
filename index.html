@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f5f0">
+  <meta name="description" content="DearME — 寬以律己，嚴以待人。個人心情記錄。">
+  <title>DearME</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="page-shell">
+    <header class="site-header">
+      <a class="wordmark" href="./" aria-label="DearME 首頁">DearME</a>
+      <p class="motto">寬以律己，嚴以待人</p>
+      <div class="header-rule" aria-hidden="true"></div>
+    </header>
+
+    <section class="journal-heading" aria-label="日記列表">
+      <div>
+        <p class="eyebrow">A PERSONAL JOURNAL</p>
+        <h1>My Journal</h1>
+      </div>
+      <p class="entry-count"><span id="entry-count">—</span><span> ENTRIES</span></p>
+    </section>
+
+    <section class="search-section" aria-label="搜尋文章">
+      <label class="search-label" for="search-input">在記憶裡找一找</label>
+      <div class="search-wrap">
+        <span class="search-icon" aria-hidden="true">⌕</span>
+        <input id="search-input" type="search" placeholder="搜尋文字或關鍵字…" autocomplete="off">
+        <button id="clear-search" class="clear-search" type="button" aria-label="清除搜尋" hidden>清除</button>
+      </div>
+    </section>
+
+    <section id="entries" class="entries" aria-live="polite">
+      <p class="status-message">正在整理記錄……</p>
+    </section>
+
+    <footer class="site-footer">
+      <span>DearME</span>
+      <span>留給自己的文字。</span>
+    </footer>
+  </main>
+</body>
+</html>
