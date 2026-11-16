@@ -63,7 +63,7 @@ function renderEntries(query = "") {
 
 async function loadEntries() {
   try {
-    const manifestResponse = await fetch(".index.json");
+    const manifestResponse = await fetch("./index.json");
     if (!manifestResponse.ok) throw new Error("無法讀取文章清單");
     const manifest = await manifestResponse.json();
 
