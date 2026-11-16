@@ -18,10 +18,7 @@
     </header>
 
     <section class="journal-heading" aria-label="日記列表">
-      <div>
-        <p class="eyebrow">A PERSONAL JOURNAL</p>
-        <h1>My Journal</h1>
-      </div>
+      <div><p class="eyebrow">A PERSONAL JOURNAL</p><h1>My Journal</h1></div>
       <p class="entry-count"><span id="entry-count">—</span><span> ENTRIES</span></p>
     </section>
 
@@ -34,14 +31,26 @@
       </div>
     </section>
 
+    <section class="write-panel">
+      <button id="toggle-form" class="write-toggle" type="button">＋ 寫下一篇</button>
+      <form id="entry-form" hidden>
+        <p class="form-date" id="today-date"></p>
+        <label for="entry-content">今天想留下什麼？</label>
+        <textarea id="entry-content" rows="6" placeholder="把此刻的想法寫下來……" required></textarea>
+        <label class="photo-label" for="entry-photo">照片（選填）</label>
+        <input id="entry-photo" type="file" accept="image/*">
+        <p class="form-hint">送出後會下載文章 JSON 和更新後的 index.json，再一起上傳到 GitHub。</p>
+        <div class="form-actions">
+          <button class="secondary-button" id="cancel-form" type="button">取消</button>
+          <button class="primary-button" type="submit">下載文章資料</button>
+        </div>
+      </form>
+    </section>
+
     <section id="entries" class="entries" aria-live="polite">
       <p class="status-message">正在整理記錄……</p>
     </section>
-
-    <footer class="site-footer">
-      <span>DearME</span>
-      <span>留給自己的文字。</span>
-    </footer>
+    <footer class="site-footer"><span>DearME</span><span>留給自己的文字。</span></footer>
   </main>
 </body>
 </html>
