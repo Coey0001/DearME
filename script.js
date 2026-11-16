@@ -63,13 +63,13 @@ function renderEntries(query = "") {
 
 async function loadEntries() {
   try {
-    const manifestResponse = await fetch("./data/index.json");
+    const manifestResponse = await fetch(".index.json");
     if (!manifestResponse.ok) throw new Error("無法讀取文章清單");
     const manifest = await manifestResponse.json();
 
     const loadedEntries = await Promise.all(
       manifest.entries.map(async (file) => {
-        const response = await fetch(`./data/${file}`);
+        const response = await fetch(`./${file.split("/").pop()}`);
         if (!response.ok) throw new Error(`無法讀取文章：${file}`);
         return response.json();
       })
